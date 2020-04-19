@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>iOS WebKit Bug</title>
+    <style>
+      .body--red {
+        background-color: black;
+      }
+      .select__option {
+        font-size: 1vmax;
+      }
+    </style>
+    <script>
+      function bgToggle() {
+        const body = document.body;
+        if (body.classList.contains("body--red")) {
+          body.classList.remove("body--red");
+        } else {
+          body.classList.add("body--red");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" class="select__button" onclick="bgToggle()">
+      Click me!
+    </button>
+    <select name="select" class="select" value="one">
+      <option value="one" class="select__option">one</option>
+      <option value="two" class="select__option">two</option>
+    </select>
+  </body>
+</html>
